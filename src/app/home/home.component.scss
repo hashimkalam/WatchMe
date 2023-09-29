@@ -1,0 +1,123 @@
+.home-container {
+  display: flex;
+
+  .all-movies {
+    width: 75%;
+    min-height: calc(100vh - 80px);
+
+    border-right: 1px solid #fdc827;
+    padding: 20px 40px;
+
+    font-family: "Roboto", sans-serif;
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      h4 {
+        text-transform: uppercase;
+        font-weight: 600;
+        border-left: 5px solid #ff9900;
+        padding-left: 15px;
+      }
+      .view-all {
+        color: #ff9900;
+        cursor: pointer;
+      }
+    }
+
+    .movies-thumbnail {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      .movie {
+        background-color: rgba($color: #ff9900, $alpha: 0.1);
+        margin: 30px;
+        .cover {
+          img {
+            width: 150px;
+            object-fit: contain;
+            border-radius: 5px;
+            margin: 0 auto;
+          }
+        }
+
+        .details {
+          width: 180px;
+          .name {
+            font-weight: 600;
+            height: 50px;
+            margin-top: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .movies-thumbnail::-webkit-scrollbar {
+      height: 12px;
+      /* display: none;*/
+    }
+
+    .movies-thumbnail::-webkit-scrollbar-thumb {
+      background-color: #999;
+    }
+
+    .movies-thumbnail::-webkit-scrollbar-thumb:hover {
+      background-color: #777;
+    }
+
+    .movies-thumbnail::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+
+  .popular-movies {
+    width: 25%;
+    min-height: calc(100vh - 80px);
+    padding: 20px 40px;
+    font-family: "Roboto", sans-serif;
+    h4 {
+      text-transform: uppercase;
+      font-weight: 600;
+      border-left: 5px solid #ff9900;
+      padding-left: 15px;
+    }
+
+    .movies {
+      .movie {
+        margin-bottom: 20px;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .name {
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+
+      .view-all {
+        color: #f90;
+        text-align: center;
+        margin-top: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.rating {
+  padding-right: 45px;
+  position: relative;
+
+  .rating-value {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-weight: 600;
+  }
+}

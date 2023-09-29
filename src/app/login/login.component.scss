@@ -1,0 +1,82 @@
+.login-container {
+  height: 100vh;
+  max-width: 1750px;
+
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgb(2, 181, 2) 20%,
+    rgb(2, 181, 2) 80%,
+    transparent
+  );
+  width: 95vw;
+  box-shadow: 0 2.5px 10px gray;
+  margin: auto;
+  position: relative;
+
+  img {
+    display: flex;
+    margin: auto;
+    opacity: 0.9;
+  }
+
+  .desc {
+    font-size: 25px;
+    font-family: "Aladin", cursive;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    text-align: right;
+    width: 1200px;
+  }
+
+  .film {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 475px;
+    object-fit: contain;
+  }
+
+  .login-form {
+    width: 500px;
+    padding: 20px;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 5px 5px 20px #383838;
+    .logo {
+      width: 150px;
+      display: flex;
+      margin: auto;
+    }
+  }
+
+  .form-group {
+    margin-top: 20px;
+  }
+
+  label {
+    font-weight: 600;
+    opacity: 0.75;
+  }
+  .btn-container {
+    position: relative;
+    .btn {
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    .error {
+      position: absolute;
+      top: 32px;
+      right: 0;
+      color: red;
+    }
+  }
+}
