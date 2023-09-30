@@ -1,5 +1,5 @@
 <div class="login-container">
-  <img src="https://shorturl.at/eqsAK" />
+  <img class="logo-background" src="../assets/images/logo-background.svg" />
   <div class="desc"></div>
   <form class="login-form">
     <img class="logo" src="../assets/images/logo.png" />
@@ -11,6 +11,7 @@
         class="form-control"
         [(ngModel)]="username"
       />
+      {{ unameFeedbackMsg }}
     </div>
     <div class="form-group">
       <label for="pword">Password</label>

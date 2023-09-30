@@ -1,23 +1,33 @@
 .login-container {
   height: 100vh;
   max-width: 1750px;
+  background: radial-gradient(
+      ellipse at right top,
+      transparent 33.2%,
+      #001220 33%,
+      #001220 72.4%,
+      rgb(2, 181, 2) 71%
+    ),
+    radial-gradient(
+      ellipse at left top,
+      transparent 33.2%,
+      #001220 33%,
+      rgb(2, 181, 2) 50%,
+      rgb(2, 181, 2) 80%,
+      #001220 77.5%,
+      transparent 80%
+    );
 
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgb(2, 181, 2) 20%,
-    rgb(2, 181, 2) 80%,
-    transparent
-  );
   width: 95vw;
   box-shadow: 0 2.5px 10px gray;
   margin: auto;
   position: relative;
 
-  img {
+  .logo-background {
+    height: 100vh;
     display: flex;
     margin: auto;
-    opacity: 0.9;
+    z-index: -1;
   }
 
   .desc {
@@ -65,18 +75,32 @@
     font-weight: 600;
     opacity: 0.75;
   }
+  .form-control {
+    text-align: center;
+  }
   .btn-container {
     position: relative;
     .btn {
-      margin-top: 30px;
+      margin-top: 10px;
       width: 100%;
     }
 
     .error {
-      position: absolute;
-      top: 32px;
-      right: 0;
       color: red;
+      margin-top: 10px;
+      font-weight: bold;
+      animation: glow 2s infinite;
+    }
+
+    @keyframes glow {
+      0%,
+      100% {
+        transform: scale(1.1);
+      }
+
+      50% {
+        transform: scale(1);
+      }
     }
   }
 }
